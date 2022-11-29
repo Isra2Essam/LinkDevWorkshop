@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+  --gray-color: #5E6282;
+  --orange-color: #ff7c16;
+  --pink-color: #F215B6;
+  --blue-color: #181E4B;
+  --red-color: #e72228;
+  --white-color: #FFF;
+  --green-color: #A6E51C;
+  --light-blue: #13BEFF;
+  --purple-color: #253776;
+  --transparent-gray: #74747433;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}

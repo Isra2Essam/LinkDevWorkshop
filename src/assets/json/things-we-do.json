@@ -1,0 +1,39 @@
+[
+  {
+    "title": "We Deliver Digital Productivity",
+    "brief": "We craft technology solutions that digitally bond and transform the productivity of our customers and their citizens, workers, consumers and partners.",
+    "readMore": "Read More",
+    "items": [
+      {
+        "id": 1,
+        "itemTitle": "Crafty Mind",
+        "image": "assets/images/CraftyMind.png",
+        "class": "flex-end upperPos"
+      },
+      {
+        "id": 2,
+        "itemTitle": "Envision",
+        "image": "assets/images/Envision.png",
+        "class": "flex-end"
+      },
+      {
+        "id": 3,
+        "itemTitle": "Transformation",
+        "image": "assets/images/Transformation.png",
+        "class": "centerPos flex-end"
+      },
+      {
+        "id": 4,
+        "itemTitle": "Services",
+        "image": "assets/images/Services.png",
+        "class": "flex-start upperPos"
+      },
+      {
+        "id": 5,
+        "itemTitle": "Dynamics 365",
+        "image": "assets/images/Dynamics.png",
+        "class": "flex-start"
+      }
+    ]
+  }
+]
