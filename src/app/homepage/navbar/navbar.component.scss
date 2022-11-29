@@ -1,0 +1,39 @@
+.main_navbar {
+  background-color: var(--white-color);
+  .navbar-toggler{
+      border-color: var(--green-color);
+      color: var(--green-color);
+      z-index: 2;
+      &:hover{
+          background-color: var(--green-color);
+          color: var(--white-color);
+      }
+      &:focus{
+          box-shadow: none;
+      }
+  }
+  .navbar-nav {
+      .nav-item {
+          padding: 0 1rem;
+          .nav-link {
+              color: #000;
+              font-weight: 500;
+              &.navigate{
+                  cursor: pointer;
+              }
+          }
+      }
+      .select_lang {
+          border: 0;
+          &:focus {
+              box-shadow: none;
+          }
+      }
+      &.right_nav{
+          @media (max-width:768px) {
+              flex-direction: row;
+              justify-content: space-between;
+          }
+      }
+  }
+}
