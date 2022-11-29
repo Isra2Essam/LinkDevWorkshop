@@ -1,0 +1,23 @@
+<section class="text-center pt-3 thing_we_do">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-7 ">
+        <div class="row things-imgs ">
+          <div class="col-md-4" [ngClass]="thing.class" *ngFor="let thing of thingsWeDoList">
+            <div class="card">
+              <img [src]="thing.image" alt="things we do" class="card-img">
+              <div class="card-img-overlay">
+                <h5 class="card-title">{{thing.itemTitle}}</h5>
+                <a class="read_more"> <em class="fa fa-arrow-right"></em> &nbsp; Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 info">
+        <h1>{{title}}</h1>
+        <p>{{brief}}</p>
+      </div>
+    </div>
+  </div>
+</section>

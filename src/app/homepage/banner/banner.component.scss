@@ -1,0 +1,152 @@
+@mixin circle($dimentions) {
+  border-radius: 50%;
+  width: $dimentions;
+  height: $dimentions;
+}
+
+.banner-aside {
+  & > img{
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    width: 88%;
+    z-index: -1;
+  }
+  & h6,
+  & h1 {
+    font-weight: 700;
+    letter-spacing: -0.68px;
+  }
+
+  & h6 {
+    padding-top: 4rem;
+    text-transform: uppercase;
+    color: var(--pink-color);
+  }
+
+  & h1 {
+    color: var(--blue-color);
+    font-size: 3.4rem;
+  }
+
+  & p {
+    line-height: 25px;
+    word-spacing: 2px;
+    font-weight: 500;
+    color: var(--gray-color);
+  }
+
+  & .btn {
+    background-color: var(--orange-color);
+    width: 35%;
+    border-radius: 5px;
+    color: var(--white-color);
+    padding: 10px;
+  }
+
+  & .play-btn {
+    padding: 6px;
+    background: var(--red-color);
+    width: 38px;
+    height: 38px;
+    color: var(--white-color);
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  & .play-btn+span {
+    color: var(--gray-color);
+  }
+
+  & ul.circles {
+    list-style: none;
+    column-gap: 11px;
+    margin-bottom: 2rem;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  & ul.circles li {
+    display: inline-block;
+  }
+  ul.circles li{
+    @include circle(30px);
+    cursor: pointer;
+  }
+}
+
+.slide-img {
+  position: absolute;
+  right: 20%;
+  top: -15%;
+  height: 115%;
+}
+
+.animated-img {
+
+  position: absolute;
+  right: -36%;
+  top: -98%;
+  margin:-60px 0 0 -60px;
+  -webkit-animation:spin 6s linear infinite;
+  -moz-animation:spin 6s linear infinite;
+  animation:spin 6s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .animated-img {
+    right: -36%;
+    top: -25%;
+    height: 85%;
+  }
+
+  .slide-img {
+    right: -21%;
+    top: 21%;
+    height: 79%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-img {
+    right: 0%;
+    top: 30%;
+    height: 70%;
+  }
+
+  .animated-img {
+    right: -36%;
+    top: -53%;
+  }
+}
+
+@media (max-width: 425px) {
+  .slide-img {
+    display: none;
+  }
+
+  .animated-img {
+    top: -45rem;
+    width: 284px;
+    right: -3rem;
+  }
+}

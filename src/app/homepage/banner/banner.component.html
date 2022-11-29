@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row banner">
+    <div *ngIf="!ready">Loading...</div>
+    <div *ngIf="ready" class="col-md-4 banner-aside position-relative">
+      <img [src]="'../../../assets/images/' + selectedBanner.colorCode +'.png'" alt="">
+      <h6 [style]="{ color: '#' + selectedBanner.colorCode }">{{ selectedBanner.category }}</h6>
+      <h1 class="pt-3">{{ selectedBanner.title }}</h1>
+      <p class="pt-3"> {{ selectedBanner.brief }}</p>
+      <div class="d-flex" style="column-gap: 25px;">
+        <button class="btn">Find out More</button>
+        <div class="d-flex justify-content-center align-items-center  ">
+          <span class="play-btn">
+            <i class="fa fa-play" aria-hidden="true"> </i>
+          </span>
+          <span class="ps-3">Play Demo</span>
+        </div>
+      </div>
+      <br>
+      <ul class="circles p-0 d-flex align-items-center pt-3">
+        <li (click)="switchBanner(i)" class="circle " *ngFor="let banner of banners; let i = index"
+          [style]="{ background: '#' + banner.colorCode,  order: banner.order}"></li>
+      </ul>
+    </div>
+    <div class="col-md-8 position-relative">
+      <img class="animated-img" src="../../../assets/images/Decore.svg" alt="animated-img">
+      <img class="slide-img" [src]="'../../../assets/images/slide'+currentIndex+'.png'" alt="">
+    </div>
+  </div>
+</div>
